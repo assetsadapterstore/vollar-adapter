@@ -273,10 +273,10 @@ func (decoder *TransactionDecoder) CreateBTCRawTransaction(wrapper openwallet.Wa
 	decoder.wm.Log.Std.Notice("-----------------------------------------------")
 	decoder.wm.Log.Std.Notice("From Account: %s", accountID)
 	decoder.wm.Log.Std.Notice("To Address: %s", strings.Join(destinations, ", "))
-	decoder.wm.Log.Std.Notice("Use: %v", balance.StringFixed(decoder.wm.Decimal()))
-	decoder.wm.Log.Std.Notice("Fees: %v", actualFees.StringFixed(decoder.wm.Decimal()))
-	decoder.wm.Log.Std.Notice("Receive: %v", computeTotalSend.StringFixed(decoder.wm.Decimal()))
-	decoder.wm.Log.Std.Notice("Change: %v", changeAmount.StringFixed(decoder.wm.Decimal()))
+	decoder.wm.Log.Std.Notice("Use: %v", balance.String())
+	decoder.wm.Log.Std.Notice("Fees: %v", actualFees.String())
+	decoder.wm.Log.Std.Notice("Receive: %v", computeTotalSend.String())
+	decoder.wm.Log.Std.Notice("Change: %v", changeAmount.String())
 	decoder.wm.Log.Std.Notice("Change Address: %v", changeAddress)
 	decoder.wm.Log.Std.Notice("-----------------------------------------------")
 
@@ -635,12 +635,11 @@ func (decoder *TransactionDecoder) createBTCRawTransaction(
 
 	//装配输入
 	for to, amount := range to {
-		//deamount, _ := decimal.NewFromString(amount)
+		txTo = append(txTo, fmt.Sprintf("%s:%s", to, amount.String()))
 		amount = amount.Shift(decoder.wm.Decimal())
-		out := vollarTransaction.Vout{to, uint64(amount.IntPart())}
+		intAmount := uint64(amount.IntPart())
+		out := vollarTransaction.Vout{to, intAmount}
 		vouts = append(vouts, out)
-
-		txTo = append(txTo, fmt.Sprintf("%s:%s", to, amount))
 	}
 
 	/////////构建空交易单
