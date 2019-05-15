@@ -419,7 +419,7 @@ func TestGetBlockChainInfo(t *testing.T) {
 }
 
 func TestListUnspent(t *testing.T) {
-	utxos, err := tw.ListUnspent(0, "VcezzxyRG8y5vXhaUUibrqygm4QSPbc6Z7F")
+	utxos, err := tw.ListUnspent(0, "VcRyPBhNE64TPJ1rXP6wULFDNHhEqCGxe7c")
 	if err != nil {
 		t.Errorf("ListUnspent failed unexpected error: %v\n", err)
 		return

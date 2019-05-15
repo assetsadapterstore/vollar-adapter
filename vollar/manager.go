@@ -36,6 +36,7 @@ func NewWalletManager() *WalletManager {
 	wm.Config.MainNetAddressPrefix = MainNetAddressPrefix
 	wm.Config.TestNetAddressPrefix = TestNetAddressPrefix
 	wm.Decoder = NewAddressDecoder(&wm)
+	wm.TxDecoder = NewTransactionDecoder(&wm)
 	wm.Log = log.NewOWLogger(wm.Symbol())
 	return &wm
 }

@@ -130,8 +130,8 @@ func TestTransfer(t *testing.T) {
 
 	tm := testInitWalletManager()
 	walletID := "WGQHsFUqg8gXtaAketv1amJuYi3i949vb3"
-	accountID := "XHbxg2wooxSE2GoaKDYhjUUPksFgwHWUspsFVvY9RgK"
-	to := "VcRyPBhNE64TPJ1rXP6wULFDNHhEqCGxe7c"
+	accountID := "2XWy8sjUxyn6zXqz3oeN9GZscGQ1pJ4dtTmmaFhdwiUa"
+	to := "Vcmi85j5r2sXTudqyFjhXR76J1u2NykN8FF"
 
 	//accountID := "4pCyvbjBwC5LENTpceEfLpwvTtNk6zRb5QxDMiiaWoRq"
 	//to := "2YARdSbYnAriqdAu2rauNr3gvbEoqhdnTt"
@@ -139,7 +139,7 @@ func TestTransfer(t *testing.T) {
 
 	testGetAssetsAccountBalance(tm, walletID, accountID)
 
-	rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "1.23", "", nil)
+	rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "1.23456789", "", nil)
 	if err != nil {
 		return
 	}
@@ -165,9 +165,11 @@ func TestTransfer(t *testing.T) {
 
 func TestSummary(t *testing.T) {
 	tm := testInitWalletManager()
-	walletID := "W99vKMidCHAfmp3ngHUqFvDCW5ZjqMRrGL"
-	accountID := "Ao2wUCr51JH3bvw2zS4QAqVR1nnvKuqPanmB9LL8ZvbU"
-	summaryAddress := "2M3XABYEqqWf5CC9RZjRKb8dwJKo28uB3v"
+	walletID := "WGQHsFUqg8gXtaAketv1amJuYi3i949vb3"
+	accountID := "XHbxg2wooxSE2GoaKDYhjUUPksFgwHWUspsFVvY9RgK"
+	summaryAddress := "VcTYdt6zXq9TYW9HeBcPTLLco4doDGhq6wy"
+
+	//accountID := "2XWy8sjUxyn6zXqz3oeN9GZscGQ1pJ4dtTmmaFhdwiUa"
 
 	testGetAssetsAccountBalance(tm, walletID, accountID)
 
