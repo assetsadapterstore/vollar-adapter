@@ -23,6 +23,8 @@ rpcPassword = "password"
 isTestNet = false
 # support segWit
 supportSegWit = false
+# minimum transaction fees
+minFees = "0.00001"
 
 ```
 

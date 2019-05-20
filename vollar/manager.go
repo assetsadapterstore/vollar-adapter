@@ -32,7 +32,7 @@ type WalletManager struct {
 func NewWalletManager() *WalletManager {
 	wm := WalletManager{}
 	wm.WalletManager = bitcoin.NewWalletManager()
-	wm.Config = bitcoin.NewConfig(Symbol, MasterKey)
+	wm.Config = bitcoin.NewConfig(Symbol, CurveType, Decimals)
 	wm.Config.MainNetAddressPrefix = MainNetAddressPrefix
 	wm.Config.TestNetAddressPrefix = TestNetAddressPrefix
 	wm.Decoder = NewAddressDecoder(&wm)
