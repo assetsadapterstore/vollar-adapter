@@ -14,7 +14,7 @@ import (
 )
 
 type TransactionDecoder struct {
-	openwallet.TransactionDecoderBase
+	*openwallet.TransactionDecoderBase
 	wm *WalletManager //钱包管理者
 }
 
