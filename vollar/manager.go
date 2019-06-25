@@ -38,6 +38,9 @@ func NewWalletManager() *WalletManager {
 	wm.Decoder = NewAddressDecoder(&wm)
 	wm.TxDecoder = NewTransactionDecoder(&wm)
 	wm.Log = log.NewOWLogger(wm.Symbol())
+
+	//不扫描内存池
+	wm.Blockscanner.IsScanMemPool = false
 	return &wm
 }
 
