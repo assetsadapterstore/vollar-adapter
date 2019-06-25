@@ -157,7 +157,7 @@ func (decoder *TransactionDecoder) CreateBTCRawTransaction(wrapper openwallet.Wa
 
 	if len(address) == 0 {
 		//return openwallet.Errorf(openwallet.ErrAccountNotAddress, "[%s] have not addresses", accountID)
-		return fmt.Errorf("[%s] have not addresses", accountID)
+		return openwallet.Errorf(openwallet.ErrAccountNotAddress,"[%s] have not addresses", accountID)
 	}
 
 	searchAddrs := make([]string, 0)
@@ -172,7 +172,7 @@ func (decoder *TransactionDecoder) CreateBTCRawTransaction(wrapper openwallet.Wa
 	}
 
 	if len(unspents) == 0 {
-		return fmt.Errorf("[%s] balance is not enough", accountID)
+		return openwallet.Errorf(openwallet.ErrInsufficientBalanceOfAccount,"[%s] balance is not enough", accountID)
 	}
 
 	if len(rawTx.To) == 0 {
@@ -234,7 +234,7 @@ func (decoder *TransactionDecoder) CreateBTCRawTransaction(wrapper openwallet.Wa
 		}
 
 		if balance.LessThan(computeTotalSend) {
-			return fmt.Errorf("The balance: %s is not enough! ", balance.StringFixed(decoder.wm.Decimal()))
+			return openwallet.Errorf(openwallet.ErrInsufficientBalanceOfAccount,"The balance: %s is not enough! ", balance.StringFixed(decoder.wm.Decimal()))
 		}
 
 		//计算手续费，找零地址有2个，一个是发送，一个是新创建的
@@ -446,7 +446,7 @@ func (decoder *TransactionDecoder) CreateBTCSummaryRawTransaction(wrapper openwa
 	}
 
 	if len(address) == 0 {
-		return nil, fmt.Errorf("[%s] have not addresses", accountID)
+		return nil, openwallet.Errorf(openwallet.ErrAccountNotAddress,"[%s] have not addresses", accountID)
 	}
 
 	searchAddrs := make([]string, 0)
