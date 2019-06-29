@@ -76,12 +76,33 @@ func TestGetBlock(t *testing.T) {
 }
 
 func TestGetTransaction(t *testing.T) {
-	raw, err := tw.GetTransaction("af1fc8e86f763dc517309e74aa45e317d3bb30bd4c3cacd3dc83a96b5d5f5436")
+	raw, err := tw.GetTransaction("d8d0df2f7fcbf96365c4fa4d2a60e53a9615973f0d0b0cc0d8602aab167d743c")
 	if err != nil {
 		t.Errorf("GetTransaction failed unexpected error: %v\n", err)
 		return
 	}
-	t.Logf("GetTransaction = %v \n", raw)
+
+	t.Logf("BlockHash = %v \n", raw.BlockHash)
+	t.Logf("BlockHeight = %v \n", raw.BlockHeight)
+	t.Logf("Blocktime = %v \n", raw.Blocktime)
+	t.Logf("Fees = %v \n", raw.Fees)
+
+	t.Logf("========= vins ========= \n")
+
+	for i, vin := range raw.Vins {
+		t.Logf("TxID[%d] = %v \n", i, vin.TxID)
+		t.Logf("Vout[%d] = %v \n", i, vin.Vout)
+		t.Logf("Addr[%d] = %v \n", i, vin.Addr)
+		t.Logf("Value[%d] = %v \n", i, vin.Value)
+	}
+
+	t.Logf("========= vouts ========= \n")
+
+	for i, out := range raw.Vouts {
+		t.Logf("ScriptPubKey[%d] = %v \n", i, out.ScriptPubKey)
+		t.Logf("Addr[%d] = %v \n", i, out.Addr)
+		t.Logf("Value[%d] = %v \n", i, out.Value)
+	}
 }
 
 func TestGetTxIDsInMemPool(t *testing.T) {
