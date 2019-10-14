@@ -43,6 +43,7 @@ github.com/blocktree/bitcoin-adapter v1.2.0 h1:x0aVax8zoAHRlDPB8EbOsXp/3um63oGN4
 github.com/blocktree/bitcoin-adapter v1.2.0/go.mod h1:0KHERBS98PXXFUhZ2MBX9usxDenNXpRUPp9mNjuevcE=
 github.com/blocktree/bitcoin-adapter v1.2.19 h1:RwxWSmnX9iFafy4bcqIurWexnrrNJrG3C/7Iw9bSOB8=
 github.com/blocktree/bitcoin-adapter v1.2.19/go.mod h1:RMJevmCQtKrCAn2QylLAoA3KkckhlB4oRmGs2klfbaI=
+github.com/blocktree/bitcoin-adapter v1.2.21 h1:U0qdobRff2aW3lTQIvRy1ilgUZyB/zsrxQNocR/gCvc=
 github.com/blocktree/bitcoin-adapter v1.2.21/go.mod h1:Un9Rrazrj50jOfMTCZWCusSa0OoBhAHI8MhQFy/2l5s=
 github.com/blocktree/bitshares-adapter v1.0.5/go.mod h1:tyzkgBUWF65zFQoQSj3l1IRhI/3pkSWFwnG9bnM3XZE=
 github.com/blocktree/ddmchain-adapter v1.0.5/go.mod h1:oqsMVtGaRVm0JIEld4Ge9vblhwjSuv4k73artQE+EO8=
@@ -73,9 +74,12 @@ github.com/blocktree/go-owcdrivers v1.0.37/go.mod h1:ZhndO+bVH1s39I/ECFg2lHwo6Ou
 github.com/blocktree/go-owcdrivers v1.0.39/go.mod h1:ZhndO+bVH1s39I/ECFg2lHwo6OuTI3xfXS2w06rTJtU=
 github.com/blocktree/go-owcdrivers v1.0.42/go.mod h1:icMC6RUkkOp+Zw9jRZ+x+TCwSosX2v2rT9aePeyn+4E=
 github.com/blocktree/go-owcdrivers v1.1.11/go.mod h1:Ob+XKMlsFIT+c+1vd9bnBbTiMWn78BPFqFf3w4XUHTI=
+github.com/blocktree/go-owcdrivers v1.1.16 h1:M7NUWl5TN9HPGRNDaYwkLPiEq0S8kmIcAiakWoupzYU=
+github.com/blocktree/go-owcdrivers v1.1.16/go.mod h1:Ob+XKMlsFIT+c+1vd9bnBbTiMWn78BPFqFf3w4XUHTI=
 github.com/blocktree/go-owcrypt v1.0.1 h1:hTqRN7mH2L0mVzHcL9jE0YM7B4oUFiDvksLEpam7oU8=
 github.com/blocktree/go-owcrypt v1.0.1/go.mod h1:5FCinL/4XVEqbmAFTOUgfMJVNJEw6WzVy624qsxzZC8=
 github.com/blocktree/go-owcrypt v1.0.2/go.mod h1:5FCinL/4XVEqbmAFTOUgfMJVNJEw6WzVy624qsxzZC8=
+github.com/blocktree/go-owcrypt v1.0.3 h1:qfAwJsWYp7WaI26hAwPuFUrMXhD9bWwuGXYWBOLsVes=
 github.com/blocktree/go-owcrypt v1.0.3/go.mod h1:5FCinL/4XVEqbmAFTOUgfMJVNJEw6WzVy624qsxzZC8=
 github.com/blocktree/moacchain-adapter v1.0.3/go.mod h1:xqI9JVRImzfAqNaRTPsDwSGroCZ+DI7fzA3D5hkS9tA=
 github.com/blocktree/nulsio-adapter v1.0.9/go.mod h1:rZCU7FqIodBjRArb1SJ4u2Ft58Zxznx2MxOo27vjxjI=
@@ -200,6 +204,7 @@ github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaO
 github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/mattn/go-runewidth v0.0.3 h1:a+kO+98RDGEfo6asOGMmpodZq4FNtnGP54yps8BzLR4=
 github.com/mattn/go-runewidth v0.0.3/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
+github.com/mattn/go-runewidth v0.0.4 h1:2BvfKmzob6Bmd4YsL0zygOqfdFnK7GR4QL06Do4/p7Y=
 github.com/mattn/go-runewidth v0.0.4/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
 github.com/mattn/go-sqlite3 v1.10.0/go.mod h1:FPy6KqzDD04eiIsT53CuJW3U88zkxoIYsOqkbpncsNc=
 github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
@@ -290,6 +295,7 @@ golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACk
 golang.org/x/crypto v0.0.0-20190404164418-38d8ce5564a5 h1:bselrhR0Or1vomJZC8ZIjWtbDmn9OYFLX5Ik9alpJpE=
 golang.org/x/crypto v0.0.0-20190404164418-38d8ce5564a5/go.mod h1:WFFai1msRO1wXaEeE5yQxYXgSfI8pQAWXbQop6sCtWE=
 golang.org/x/crypto v0.0.0-20190418165655-df01cb2cc480/go.mod h1:WFFai1msRO1wXaEeE5yQxYXgSfI8pQAWXbQop6sCtWE=
+golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4 h1:HuIa8hRrWRSrqYzx1qI49NNxhdi2PrY7gxVSq1JjLDc=
 golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/lint v0.0.0-20181026193005-c67002cb31c3/go.mod h1:UVdnD1Gm6xHRNCYTkRU2/jEulfH38KcIWyp/GAMgvoE=
 golang.org/x/net v0.0.0-20180724234803-3673e40ba225/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
